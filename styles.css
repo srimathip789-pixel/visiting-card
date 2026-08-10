@@ -14,6 +14,12 @@
     print-color-adjust: exact;
 }
 
+/* Prevent auto-linking underlines in browsers */
+a, a[href^="tel"], a[href^="sms"], a[href^="mailto"] {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
 .print-controls {
     text-align: center;
     margin-bottom: 20px;
@@ -108,10 +114,10 @@ body {
 
 .watermark-logo {
     position: absolute;
-    right: 5px;
-    bottom: 0.5in; /* Above the footer */
-    width: 1.8in;
-    height: 1.8in;
+    right: 0;
+    bottom: 0.35in;
+    width: 2.0in;
+    height: 2.0in;
     color: rgba(255, 255, 255, 0.04);
     z-index: 0;
     pointer-events: none;
