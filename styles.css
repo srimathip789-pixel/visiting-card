@@ -99,16 +99,19 @@ body {
 .card-front {
     background: #1A3D7C; /* Deep sapphire blue */
     color: var(--white);
-    padding: 0.25in;
+    padding: 0;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .watermark-logo {
     position: absolute;
-    right: -15%;
-    bottom: -15%;
-    width: 2.2in;
-    height: 2.2in;
+    right: 5px;
+    bottom: 0.5in; /* Above the footer */
+    width: 1.8in;
+    height: 1.8in;
     color: rgba(255, 255, 255, 0.04);
     z-index: 0;
     pointer-events: none;
@@ -116,6 +119,12 @@ body {
 
 .front-content {
     position: relative;
+    padding: 0.25in;
+    padding-bottom: 0.1in;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     z-index: 1;
     height: 100%;
     display: flex;
@@ -196,6 +205,20 @@ body {
     gap: 3px;
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 6px;
+}
+
+.front-footer {
+    background: var(--white);
+    height: 0.35in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.2in;
+}
+
+.front-footer .tc-label,
+.front-footer strong {
+    color: var(--primary-blue);
 }
 
 .info-item {
