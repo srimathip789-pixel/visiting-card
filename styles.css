@@ -99,7 +99,6 @@ body {
 .card-front {
     background: #1A3D7C; /* Deep sapphire blue */
     color: var(--white);
-    padding: 0.25in;
     overflow: hidden;
 }
 
@@ -118,6 +117,7 @@ body {
     position: relative;
     z-index: 1;
     height: 100%;
+    padding: 0.25in;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -240,10 +240,15 @@ body {
 /* --- BACK CARD --- */
 .card-back {
     background: var(--off-white);
+    border-color: #1A3D7C;
+}
+
+.back-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-color: #1A3D7C;
+    padding: 0.25in;
+    height: 100%;
 }
 
 .back-top-section {
