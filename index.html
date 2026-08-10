@@ -73,8 +73,6 @@
             </div>
         </div>
     </div>
-    
-    <div class="html2pdf__page-break" style="height: 0; margin: 0; border: none;"></div>
 
     <!-- BACK OF CARD -->
     <div class="visiting-card card-back">
@@ -192,16 +190,25 @@
             const btn = document.querySelector('.btn-pdf');
             btn.innerHTML = "Generating PDF...";
             
-            // We temporarily strip the shadows just for the capture
+            const element = document.getElementById('pdf-wrapper');
+            const originalWrapperStyle = element.getAttribute('style');
+            
+            // Force strict top-left alignment for perfect capture
+            element.style.display = 'flex';
+            element.style.flexDirection = 'column';
+            element.style.alignItems = 'flex-start';
+            element.style.margin = '0';
+            
+            // We temporarily strip the shadows and margins just for the capture
             const cards = document.querySelectorAll('.visiting-card');
             const originalShadows = [];
+            const originalMargins = [];
             cards.forEach(card => {
                 originalShadows.push(card.style.boxShadow);
+                originalMargins.push(card.style.margin);
                 card.style.boxShadow = 'none';
-                card.style.margin = '0 auto';
+                card.style.margin = '0'; // Completely remove margins so they stack seamlessly
             });
-            
-            const element = document.getElementById('pdf-wrapper');
             
             const opt = {
                 margin:       0,
@@ -212,11 +219,18 @@
             };
 
             html2pdf().set(opt).from(element).save().then(() => {
-                // Restore shadows
+                // Restore original styles
                 cards.forEach((card, index) => {
                     card.style.boxShadow = originalShadows[index];
-                    card.style.margin = '';
+                    card.style.margin = originalMargins[index];
                 });
+                
+                if (originalWrapperStyle) {
+                    element.setAttribute('style', originalWrapperStyle);
+                } else {
+                    element.removeAttribute('style');
+                }
+                
                 btn.innerHTML = "Download Print-Ready PDF";
             });
         }
