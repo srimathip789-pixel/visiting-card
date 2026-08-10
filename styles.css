@@ -209,8 +209,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 3px;
-    border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 6px;
+    margin-top: auto;
+    position: relative;
+    z-index: 10;
 }
 
 .front-footer {
