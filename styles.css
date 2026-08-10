@@ -462,8 +462,8 @@ body {
 }
 
 .back-footer {
-    background: #1A3D7C;
-    height: 0.35in;
+    background: var(--primary-blue);
+    height: 0.45in;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -489,10 +489,10 @@ body {
 }
 
 .qr-code {
-    width: 0.28in;
-    height: 0.28in;
+    width: 0.38in;
+    height: 0.38in;
     background: white;
-    padding: 1px;
+    padding: 1.5px;
 }
 
 .qr-wrapper {
@@ -675,8 +675,8 @@ body {
 }
 
 .back-footer {
-    background: #1A3D7C;
-    height: 0.35in;
+    background: var(--primary-blue);
+    height: 0.45in;
     display: flex;
     align-items: center;
     justify-content: space-between;
