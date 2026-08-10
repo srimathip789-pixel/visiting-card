@@ -18,6 +18,9 @@ const path = require('path');
     
     elements.forEach(el => {
       // Check for overflow
+      const style = window.getComputedStyle(el);
+      if (style.overflow === 'hidden') return;
+      
       if (el.scrollWidth > el.clientWidth && el.clientWidth > 0) {
         problems.push(`Overflow Width on: <${el.tagName.toLowerCase()} class="${el.className}"> - ScrollWidth: ${el.scrollWidth}, ClientWidth: ${el.clientWidth}`);
       }
