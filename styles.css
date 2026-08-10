@@ -286,10 +286,10 @@ body {
 
 .back-main-grid {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     gap: 0.15in;
-    padding: 0.02in 0.2in;
+    padding: 0.12in 0.2in 0.05in;
     flex: 1;
     position: relative;
     z-index: 10;
@@ -298,16 +298,16 @@ body {
 .grid-col-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 6px;
+    justify-content: flex-start;
+    gap: 12px;
     width: 50%;
     min-width: 0;
 }
 .grid-col-right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 8px;
+    justify-content: flex-start;
+    gap: 12px;
     width: 50%;
     min-width: 0;
 }
@@ -481,10 +481,10 @@ body {
 
 .back-main-grid {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     gap: 0.15in;
-    padding: 0.02in 0.2in;
+    padding: 0.12in 0.2in 0.05in;
     flex: 1;
     position: relative;
     z-index: 10;
@@ -493,16 +493,16 @@ body {
 .grid-col-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 6px;
+    justify-content: flex-start;
+    gap: 12px;
     width: 50%;
     min-width: 0;
 }
 .grid-col-right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 8px;
+    justify-content: flex-start;
+    gap: 12px;
     width: 50%;
     min-width: 0;
 }
@@ -815,19 +815,15 @@ body {
     mix-blend-mode: multiply;
 }
 
- . w a t e r m a r k - l o g o - b a c k   { 
-         p o s i t i o n :   a b s o l u t e ; 
-         l e f t :   - 1 5 % ; 
-         b o t t o m :   - 1 5 % ; 
-         w i d t h :   2 . 0 i n ; 
-         h e i g h t :   2 . 0 i n ; 
-         c o l o r :   r g b a ( 2 0 ,   3 5 ,   5 8 ,   0 . 0 4 ) ; 
-         z - i n d e x :   0 ; 
-         p o i n t e r - e v e n t s :   n o n e ; 
- } 
- 
- 
- . c u s t o m - f l o w - i m g   {   b a c k g r o u n d - c o l o r :   t r a n s p a r e n t ;   } 
- 
- 
- 
+.watermark-logo-back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3.0in;
+    height: 3.0in;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.custom-flow-img { background-color: transparent; }
