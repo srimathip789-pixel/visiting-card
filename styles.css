@@ -778,3 +778,10 @@ body {
     pointer-events: none;
     z-index: 0;
 }
+
+.custom-flow-img {
+    width: 1.6in;
+    object-fit: contain;
+    margin-top: 6px;
+    border-radius: 4px;
+}
