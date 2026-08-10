@@ -183,7 +183,10 @@ body {
     color: var(--cyan);
     font-size: 20pt;
     font-weight: 800;
-    line-height: 1;
+    line-height: 20pt;
+    height: 20pt;
+    display: inline-block;
+    overflow: hidden;
 }
 
 .logo-words {
