@@ -219,7 +219,7 @@ body {
 .front-footer .tc-label,
 .front-footer strong {
     color: #1A3D7C;
-    font-size: 6pt;
+    font-size: 4.5pt;
 }
 
 .front-footer .target-clients {
@@ -227,7 +227,8 @@ body {
     border: none;
     padding: 0;
     margin: 0;
-    font-size: 6pt;
+    font-size: 4.5pt;
+    white-space: nowrap;
 }
 
 .info-item {
@@ -281,6 +282,7 @@ body {
 .back-top-section {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0.15in 0.2in 0;
 }
 
@@ -460,6 +462,9 @@ body {
     display: flex;
     align-items: center;
     gap: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }
 .flow-top-label {
     top: -5px;
@@ -673,6 +678,9 @@ body {
     display: flex;
     align-items: center;
     gap: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }
 .flow-top-label {
     top: -5px;
