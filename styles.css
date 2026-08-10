@@ -302,7 +302,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1;
+    width: calc(50% - 0.1in);
+    flex: 0 0 calc(50% - 0.1in);
 }
 
 .svg-logo-wrapper {
@@ -770,7 +771,8 @@ body {
 }
 
 .custom-flow-img {
-    width: 1.6in;
+    width: 100%;
+    max-width: 1.6in;
     object-fit: contain;
     margin-top: 6px;
     border-radius: 4px;
