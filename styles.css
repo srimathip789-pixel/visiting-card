@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #e2e8f0;
     display: flex;
     flex-direction: column;
@@ -164,6 +164,25 @@ body {
     align-items: center;
     gap: 4px;
 }
+.target-clients {
+    margin-top: 3px;
+    background: rgba(217, 169, 40, 0.1);
+    border: 0.5px solid var(--gold);
+    border-radius: 4px;
+    padding: 4px 6px;
+    font-size: 4.5pt;
+    color: var(--white);
+    display: inline-block;
+    width: fit-content;
+}
+.tc-label {
+    color: var(--gold);
+    font-weight: 600;
+}
+.target-clients strong {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
 .flag-icon {
     border: 0.25px solid rgba(255, 255, 255, 0.2);
     border-radius: 0.5px;
@@ -255,10 +274,10 @@ body {
     margin-bottom: 2px;
 }
 .pitch-sans {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 5pt;
     font-weight: 600;
-    color: var(--navy);
+    color: var(--gold);
     letter-spacing: 0.2px;
 }
 
