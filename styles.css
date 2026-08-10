@@ -157,32 +157,46 @@ body {
 
 .svg-logo-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 4px;
-    margin-bottom: 2px;
+    gap: 8px;
 }
 .brand-logo-svg {
-    width: 0.5in;
-    height: 0.5in;
+    width: 0.55in;
+    height: 0.55in;
 }
 .logo-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
-.l-name {
-    font-size: 7pt;
+.l-first {
+    font-size: 6.5pt;
+    font-weight: 500;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: 0.5px;
+}
+.l-last {
+    font-size: 8.5pt;
     font-weight: 800;
     color: var(--navy);
-    line-height: 1.1;
+    line-height: 1;
     letter-spacing: 0.5px;
 }
 .l-sub {
-    font-size: 4.5pt;
+    font-size: 3.5pt;
     font-weight: 700;
     color: var(--gold);
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    margin-top: 1px;
+}
+.core-skills {
+    font-size: 4pt;
+    font-weight: 600;
+    color: var(--navy);
+    margin-top: 2px;
+    margin-left: 0.65in; /* align with text */
 }
 
 .back-top-right {
@@ -225,9 +239,13 @@ body {
     color: var(--navy);
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
 }
-.b-icon {
+.b-icon-navy {
+    color: var(--navy);
+    flex-shrink: 0;
+}
+.b-icon-gold {
     color: var(--gold);
     flex-shrink: 0;
 }
@@ -241,34 +259,35 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(217, 169, 40, 0.05); /* Using gold with opacity */
-    padding: 4px 8px;
-    border-radius: 4px;
-    border: 1px solid rgba(217, 169, 40, 0.2);
+    background: rgba(0, 0, 0, 0.03); 
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    width: 1.4in;
 }
 .flow-pill {
-    background: var(--off-white);
-    border: 1px solid var(--gold);
-    border-radius: 3px;
-    padding: 2px 10px;
-    font-size: 5pt;
+    background: var(--white);
+    border: 0.5px solid var(--gold);
+    border-radius: 4px;
+    padding: 3px 0;
+    font-size: 5.5pt;
     font-weight: 700;
     color: var(--navy);
     display: flex;
     align-items: center;
-    gap: 5px;
-    width: 1.1in;
+    gap: 6px;
+    width: 100%;
     justify-content: center;
-    box-shadow: inset 0 1px 2px white, 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 .flow-pill svg {
-    color: var(--navy);
+    /* Colors applied individually in html */
 }
 .flow-arrow {
     font-size: 5pt;
     color: var(--gold);
     line-height: 1;
-    margin: 1px 0;
+    margin: 2px 0;
 }
 
 .back-footer {
