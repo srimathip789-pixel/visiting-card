@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Mathi - Recent Work</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1A3D7C;
+            --gold: #D4AF37;
+            --gold-light: #F3E5AB;
+            --white: #FFFFFF;
+            --dark-gray: #333333;
+            --bg-color: #F8F9FA;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--dark-gray);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: var(--white);
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Subtle Watermark in Header */
+        .header::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            width: 150px;
+            height: 150px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M 50 10 A 40 40 0 1 0 50 90" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2.5"/><path d="M 50 10 L 85 10 L 85 40 C 85 70, 65 85, 50 90" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2.5"/></svg>');
+            background-size: cover;
+            pointer-events: none;
+        }
+
+        .profile-img {
+            width: 90px;
+            height: 90px;
+            background: var(--gold);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            border: 3px solid var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .welcome-msg {
+            font-size: 14px;
+            font-style: italic;
+            opacity: 0.9;
+            max-width: 80%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 30px 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #888;
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            background: var(--white);
+            border: 1.5px solid #eee;
+            border-radius: 12px;
+            padding: 15px;
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .link-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .link-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(26, 61, 124, 0.05);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--primary-blue);
+            font-size: 18px;
+        }
+
+        .link-card:hover .link-icon {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .link-text {
+            flex-grow: 1;
+        }
+
+        .link-arrow {
+            color: #ccc;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+
+        .link-card:hover .link-arrow {
+            color: var(--gold);
+        }
+
+        .whatsapp-cta {
+            margin-top: 20px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .whatsapp-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 11px;
+            color: #999;
+            background: var(--white);
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="profile-img">SM</div>
+        <h1 class="name">M. Sri Mathi</h1>
+        <div class="title">Full Stack Engineer</div>
+        <p class="welcome-msg">Hey there! Check my recent projects. Message me if you are interested to customize your business.</p>
+    </div>
+
+    <div class="content">
+        <div class="section-title">Recent Work</div>
+
+        <a href="https://www.paramakudilionsschool.in/" target="_blank" class="link-card">
+            <div class="link-icon">🏛️</div>
+            <div class="link-text">Paramakudi Lions School</div>
+            <div class="link-arrow">→</div>
+        </a>
+
+        <a href="https://anchoronglobal.com/" target="_blank" class="link-card">
+            <div class="link-icon">⚓</div>
+            <div class="link-text">Anchoron Global</div>
+            <div class="link-arrow">→</div>
+        </a>
+
+        <a href="https://mukundpolymers.in/" target="_blank" class="link-card">
+            <div class="link-icon">🏭</div>
+            <div class="link-text">Mukund Polymers</div>
+            <div class="link-arrow">→</div>
+        </a>
+
+        <a href="https://www.touchnfeelchair.in/" target="_blank" class="link-card">
+            <div class="link-icon">🪑</div>
+            <div class="link-text">Touch N Feel Chair</div>
+            <div class="link-arrow">→</div>
+        </a>
+
+        <a href="https://sri-muthalamman-jewellers.in" target="_blank" class="link-card">
+            <div class="link-icon">💎</div>
+            <div class="link-text">Sri Muthalamman Jewellers</div>
+            <div class="link-arrow">→</div>
+        </a>
+
+        <a href="https://abira-enterprises.in/" target="_blank" class="link-card">
+            <div class="link-icon">⚡</div>
+            <div class="link-text">Abira Enterprises</div>
+            <div class="link-arrow">→</div>
+        </a>
+
+        <a href="https://wa.me/97335102870?text=Hi%20Sri%20Mathi,%20I%20am%20interested%20to%20customize%20my%20business." class="whatsapp-cta">
+            <span class="whatsapp-icon">💬</span> Message Me on WhatsApp
+        </a>
+    </div>
+
+    <div class="footer">
+        © 2026 M. Sri Mathi. All Rights Reserved.
+    </div>
+</div>
+
+</body>
+</html>
