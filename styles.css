@@ -57,14 +57,27 @@ body {
 
 /* --- FRONT CARD --- */
 .card-front {
-    background: var(--navy);
-    background-image: 
-        radial-gradient(circle at 10% 20%, rgba(217, 169, 40, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 40%),
-        linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.02) 49%, rgba(255,255,255,0.02) 51%, transparent 52%);
-    background-size: 100% 100%, 100% 100%, 0.5in 0.5in;
+    background: #1A3D7C; /* Deep sapphire blue */
     color: var(--white);
     padding: 0.25in;
+    overflow: hidden;
+}
+
+.watermark-logo {
+    position: absolute;
+    right: -15%;
+    bottom: -15%;
+    width: 2.2in;
+    height: 2.2in;
+    color: rgba(255, 255, 255, 0.04);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.front-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
