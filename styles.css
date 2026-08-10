@@ -218,7 +218,16 @@ body {
 
 .front-footer .tc-label,
 .front-footer strong {
-    color: var(--primary-blue);
+    color: #1A3D7C;
+    font-size: 6pt;
+}
+
+.front-footer .target-clients {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 6pt;
 }
 
 .info-item {
@@ -485,7 +494,7 @@ body {
 }
 
 .back-footer {
-    background: var(--primary-blue);
+    background: #1A3D7C;
     height: 0.45in;
     display: flex;
     align-items: center;
@@ -698,7 +707,7 @@ body {
 }
 
 .back-footer {
-    background: var(--primary-blue);
+    background: #1A3D7C;
     height: 0.45in;
     display: flex;
     align-items: center;
