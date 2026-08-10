@@ -71,12 +71,11 @@ body {
     padding: 0.2in 0.25in;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    position: relative;
+    justify-content: space-between;
 }
 
 .front-header {
-    margin-bottom: 0.15in;
+    margin-top: 0.05in;
 }
 
 .name {
@@ -111,10 +110,7 @@ body {
 }
 
 .front-footer {
-    position: absolute;
-    bottom: 0.2in;
-    left: 0.25in;
-    right: 0.25in;
+    width: 100%;
 }
 
 .contact-grid {
