@@ -288,17 +288,21 @@ body {
     border-color: #1A3D7C;
 }
 
-.back-top-section {
+.back-main-grid {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    gap: 0.2in;
     padding: 0.15in 0.2in 0;
+    flex: 1;
+    position: relative;
+    z-index: 10;
 }
 
-.back-top-left {
+.grid-col-left, .grid-col-right {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    flex: 1;
 }
 
 .svg-logo-wrapper {
@@ -394,8 +398,10 @@ body {
 }
 
 .back-top-right {
-    width: 45%;
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 .pitch-serif {
     font-family: 'Playfair Display', serif;
@@ -413,15 +419,7 @@ body {
     letter-spacing: 0.2px;
 }
 
-.back-mid-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0.2in;
-    flex: 1;
-    position: relative;
-    z-index: 10;
-}
+
 
 .benefit-list {
     list-style: none;
@@ -446,11 +444,7 @@ body {
     flex-shrink: 0;
 }
 
-.flow-col {
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-}
+
 .flow-box {
     position: relative;
     border: 1px solid var(--gold);
@@ -662,11 +656,7 @@ body {
     flex-shrink: 0;
 }
 
-.flow-col {
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-}
+
 .flow-box {
     position: relative;
     border: 1px solid var(--gold);
