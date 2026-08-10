@@ -223,7 +223,7 @@ body {
 .front-footer .tc-label,
 .front-footer strong {
     color: #1A3D7C;
-    font-size: 5.5pt;
+    font-size: 4pt;
     letter-spacing: 0;
 }
 
@@ -232,7 +232,202 @@ body {
     border: none;
     padding: 0;
     margin: 0;
-    font-size: 5.5pt;
+    font-size: 4pt;
+    white-space: nowrap;
+}
+
+.info-item {
+    font-size: 4.5pt;
+    color: var(--soft-white);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.target-clients {
+    margin-top: 3px;
+    background: rgba(217, 169, 40, 0.1);
+    border: 0.5px solid var(--gold);
+    border-radius: 4px;
+    padding: 5px 6px;
+    font-size: 4.5pt;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    align-self: center;
+}
+.tc-label {
+    color: var(--gold);
+    font-weight: 800;
+    margin-right: 4px;
+    letter-spacing: 0.2px;
+}
+.target-clients strong {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+.flag-icon {
+    border: none;
+    background: transparent;
+    border-radius: 0.5px;
+    margin: 0 1px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* --- BACK CARD --- */
+.card-back {
+    background: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-color: #1A3D7C;
+}
+
+.back-main-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.15in;
+    padding: 0.02in 0.2in;
+    flex: 1;
+    position: relative;
+    z-index: 10;
+}
+
+.grid-col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 44%;
+    min-width: 0;
+}
+.grid-col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    width: 56%;
+    min-width: 0;
+}
+
+.svg-logo-wrapper {
+    color: rgba(255, 255, 255, 0.04);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.front-content {
+    position: relative;
+    padding: 0.15in 0.25in 0.1in;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    height: 100%;
+}
+
+.front-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16pt;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--white);
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.title {
+    font-size: 6.5pt;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    margin-top: 2px;
+}
+
+.divider {
+    width: 1.6in;
+    height: 1px;
+    background: var(--gold);
+    margin-top: 8px;
+}
+
+.slogan-badge {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 6.5pt;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.slogan {
+    font-size: 6.5pt;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 8px;
+}
+
+.contact-item {
+    font-size: 5pt;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.c-icon {
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+.front-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-top: 6px;
+    margin-top: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.front-footer {
+    background: var(--white);
+    height: 0.35in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.2in;
+}
+
+.front-footer .tc-label,
+.front-footer strong {
+    color: #1A3D7C;
+    font-size: 4pt;
+    letter-spacing: 0;
+}
+
+.front-footer .target-clients {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 4pt;
     white-space: nowrap;
 }
 
@@ -319,8 +514,8 @@ body {
     gap: 8px;
 }
 .brand-logo-svg {
-    width: 0.55in;
-    height: 0.55in;
+    width: 0.45in;
+    height: 0.45in;
 }
 .logo-text-block {
     display: flex;
@@ -615,7 +810,7 @@ body {
 .custom-flow-img {
     display: block;
     width: 100%;
-    max-height: 0.6in;
+    max-height: 0.5in;
     object-fit: contain;
     mix-blend-mode: multiply;
 }
