@@ -165,10 +165,33 @@ body {
 .logo-box {
     width: 40%;
 }
-.brand-logo {
-    max-height: 0.45in;
-    display: block;
+.svg-logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     margin-bottom: 4px;
+}
+.brand-logo-svg {
+    width: 0.4in;
+    height: 0.4in;
+    flex-shrink: 0;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.l-name {
+    font-size: 7pt;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.1;
+}
+.l-sub {
+    font-size: 4.5pt;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.5px;
 }
 .core-skills {
     font-size: 4.5pt;
