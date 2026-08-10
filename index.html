@@ -11,8 +11,14 @@
 </head>
 <body>
     <div class="print-controls no-print">
-        <p>This is your printable front-and-back business card. Press <strong>Ctrl+P</strong> (or Cmd+P) to print.</p>
-        <button onclick="window.print()">Print Card</button>
+        <div class="print-card-box">
+            <p>This is your printable front-and-back business card. Press <strong>Ctrl+P</strong> (or Cmd+P) to print.</p>
+            <div class="print-buttons">
+                <button onclick="window.print()">Print Card</button>
+                <button onclick="window.print()" class="btn-pdf">Download Print-Ready PDF</button>
+            </div>
+            <p style="font-size: 0.8em; opacity: 0.8; margin-top: 5px;">* For PDF, select "Save to PDF" in your print dialog. The preview UI will automatically hide.</p>
+        </div>
     </div>
 
     <!-- FRONT OF CARD -->

@@ -14,6 +14,46 @@
     print-color-adjust: exact;
 }
 
+.print-controls {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+.print-card-box {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.print-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+.print-controls button {
+    background: var(--navy);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.print-controls button:hover {
+    background: #0f1a2b;
+}
+.print-controls button.btn-pdf {
+    background: var(--gold);
+    color: #111;
+}
+.print-controls button.btn-pdf:hover {
+    background: #c59725;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #e2e8f0;
@@ -263,6 +303,47 @@ body {
     font-weight: 600;
     color: var(--navy);
     margin-top: 3px;
+}
+
+.flow-arrow-right {
+    font-size: 6pt;
+    color: var(--navy);
+    font-weight: 700;
+}
+.flow-bottom-label {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 4pt;
+    font-weight: 700;
+    color: var(--gold);
+    margin-top: 3px;
+}
+
+@media print {
+    @page {
+        size: 3.5in 2.0in;
+        margin: 0;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background: transparent !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    .no-print, .print-controls {
+        display: none !important;
+    }
+    
+    .visiting-card {
+        box-shadow: none !important;
+        margin: 0 !important;
+        page-break-after: always;
+        page-break-inside: avoid;
+    }
 }
 
 .back-top-right {
