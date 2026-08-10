@@ -279,8 +279,8 @@ body {
     justify-content: center;
 }
 .l-first {
-    font-size: 6.5pt;
-    font-weight: 500;
+    font-size: 8.5pt;
+    font-weight: 800;
     color: var(--navy);
     line-height: 1;
     letter-spacing: 0.5px;
