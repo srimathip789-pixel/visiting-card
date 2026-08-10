@@ -300,7 +300,7 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 6px;
-    width: 44%;
+    width: 50%;
     min-width: 0;
 }
 .grid-col-right {
@@ -308,7 +308,7 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 8px;
-    width: 56%;
+    width: 50%;
     min-width: 0;
 }
 
@@ -495,7 +495,7 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 6px;
-    width: 44%;
+    width: 50%;
     min-width: 0;
 }
 .grid-col-right {
@@ -503,7 +503,7 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 8px;
-    width: 56%;
+    width: 50%;
     min-width: 0;
 }
 
@@ -824,8 +824,10 @@ body {
          c o l o r :   r g b a ( 2 0 ,   3 5 ,   5 8 ,   0 . 0 4 ) ; 
          z - i n d e x :   0 ; 
          p o i n t e r - e v e n t s :   n o n e ; 
- }  
+ } 
+ 
  
  . c u s t o m - f l o w - i m g   {   b a c k g r o u n d - c o l o r :   t r a n s p a r e n t ;   } 
-  
+ 
+ 
  
