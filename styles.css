@@ -286,10 +286,10 @@ body {
 
 .back-main-grid {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
     gap: 0.15in;
-    padding: 0.12in 0.2in 0.05in;
+    padding: 0.02in 0.2in;
     flex: 1;
     position: relative;
     z-index: 10;
@@ -298,16 +298,16 @@ body {
 .grid-col-left {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 12px;
+    justify-content: center;
+    gap: 6px;
     width: 50%;
     min-width: 0;
 }
 .grid-col-right {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 12px;
+    justify-content: center;
+    gap: 8px;
     width: 50%;
     min-width: 0;
 }
@@ -481,10 +481,10 @@ body {
 
 .back-main-grid {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
     gap: 0.15in;
-    padding: 0.12in 0.2in 0.05in;
+    padding: 0.02in 0.2in;
     flex: 1;
     position: relative;
     z-index: 10;
@@ -493,16 +493,16 @@ body {
 .grid-col-left {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 12px;
+    justify-content: center;
+    gap: 6px;
     width: 50%;
     min-width: 0;
 }
 .grid-col-right {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 12px;
+    justify-content: center;
+    gap: 8px;
     width: 50%;
     min-width: 0;
 }
@@ -820,8 +820,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 3.0in;
-    height: 3.0in;
+    width: 1.9in;
+    height: 1.9in;
     z-index: 0;
     pointer-events: none;
 }
