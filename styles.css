@@ -814,3 +814,18 @@ body {
     object-fit: contain;
     mix-blend-mode: multiply;
 }
+
+ . w a t e r m a r k - l o g o - b a c k   { 
+         p o s i t i o n :   a b s o l u t e ; 
+         l e f t :   - 1 5 % ; 
+         b o t t o m :   - 1 5 % ; 
+         w i d t h :   2 . 0 i n ; 
+         h e i g h t :   2 . 0 i n ; 
+         c o l o r :   r g b a ( 2 0 ,   3 5 ,   5 8 ,   0 . 0 4 ) ; 
+         z - i n d e x :   0 ; 
+         p o i n t e r - e v e n t s :   n o n e ; 
+ }  
+ 
+ . c u s t o m - f l o w - i m g   {   b a c k g r o u n d - c o l o r :   t r a n s p a r e n t ;   } 
+  
+ 
