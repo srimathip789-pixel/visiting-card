@@ -210,14 +210,32 @@ body {
 }
 
 .services-heading {
-    font-size: 9pt;
+    font-size: 7pt;
     font-weight: 800;
     margin-bottom: 5px;
+    line-height: 1.2;
+    color: var(--brand-gold);
 }
 
 .services-list {
     list-style: none;
-    font-size: 6pt;
+}
+
+.new-list li {
+    font-size: 6.5pt;
+    margin-bottom: 4px;
+}
+.new-list li strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.brand-tagline {
+    font-size: 6.5pt;
+    font-weight: 800;
+    margin-top: 6px;
+    color: var(--brand-gold);
+    font-style: italic;
 }
 
 .services-list li {
@@ -277,25 +295,30 @@ body {
 .qr-area {
     position: absolute;
     bottom: 0.1in;
-    left: 0.15in;
+    left: 0.1in;
     background: #ffffff;
-    padding: 4px;
+    padding: 3px 5px;
     border: 2px solid var(--brand-navy);
     border-radius: 4px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    gap: 6px;
+    max-width: 65%;
 }
 
 .qr-area p {
     font-size: 5pt;
     color: var(--brand-navy);
-    margin-bottom: 2px;
+    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .qr-code {
-    width: 0.5in;
-    height: 0.5in;
+    width: 0.4in;
+    height: 0.4in;
+    flex-shrink: 0;
 }
 
 @media print {
