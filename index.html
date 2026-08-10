@@ -15,9 +15,9 @@
             <p>This is your printable front-and-back business card. Press <strong>Ctrl+P</strong> (or Cmd+P) to print.</p>
             <div class="print-buttons">
                 <button onclick="window.print()">Print Card</button>
-                <button onclick="window.print()" class="btn-pdf">Download Print-Ready PDF</button>
+                <button onclick="downloadPDF()" class="btn-pdf">Download Print-Ready PDF</button>
             </div>
-            <p style="font-size: 0.8em; opacity: 0.8; margin-top: 5px;">* For PDF, select "Save to PDF" in your print dialog. The preview UI will automatically hide.</p>
+            <p style="font-size: 0.8em; opacity: 0.8; margin-top: 5px;">* PDF will download automatically with exact 3.5" x 2" dimensions.</p>
         </div>
     </div>
 
@@ -180,5 +180,51 @@
             <img src="https://quickchart.io/qr?text=https%3A%2F%2Fwa.me%2F97335102870%3Ftext%3DHi%2520Sri%2520Mathi%252C%2520I%2520scanned%2520your%2520visiting%2520card%2520and%2520would%2520like%2520a%2520free%2520website%2520demo%2520layout%2520for%2520my%2520business&size=150&margin=1" alt="QR Code" class="qr-code">
         </div>
     </div>
+
+    <!-- html2pdf Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadPDF() {
+            // Create a temporary container to hold just the cards
+            const container = document.createElement('div');
+            
+            // Clone the cards so we don't disrupt the UI
+            const front = document.querySelector('.card-front').cloneNode(true);
+            const back = document.querySelector('.card-back').cloneNode(true);
+            
+            // Strip margins and shadows for perfect PDF output
+            front.style.margin = '0';
+            front.style.boxShadow = 'none';
+            back.style.margin = '0';
+            back.style.boxShadow = 'none';
+            
+            // Add html2pdf page break class
+            const pageBreak = document.createElement('div');
+            pageBreak.classList.add('html2pdf__page-break');
+            
+            container.appendChild(front);
+            container.appendChild(pageBreak);
+            container.appendChild(back);
+            
+            // Append off-screen so html2canvas can render it
+            container.style.position = 'absolute';
+            container.style.left = '-9999px';
+            document.body.appendChild(container);
+
+            // Configure PDF exactly to 3.5 x 2 inches in landscape
+            const opt = {
+                margin:       0,
+                filename:     'Sri_Mathi_Business_Card.pdf',
+                image:        { type: 'jpeg', quality: 1 },
+                html2canvas:  { scale: 4, useCORS: true, logging: false },
+                jsPDF:        { unit: 'in', format: [3.5, 2.0], orientation: 'landscape' }
+            };
+
+            // Generate and download PDF, then cleanup
+            html2pdf().set(opt).from(container).save().then(() => {
+                document.body.removeChild(container);
+            });
+        }
+    </script>
 </body>
 </html>
