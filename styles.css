@@ -89,6 +89,16 @@ body {
     letter-spacing: 0.5px;
 }
 
+.header-white .slogan {
+    margin-top: 8px;
+    font-size: 7pt;
+    font-weight: 800;
+    color: var(--brand-navy);
+    line-height: 1.3;
+    border-left: 2px solid var(--brand-gold);
+    padding-left: 5px;
+}
+
 .blue-ribbon {
     position: absolute;
     top: 0.6in;
