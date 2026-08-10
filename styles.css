@@ -189,6 +189,19 @@ body {
     letter-spacing: 0.5px;
 }
 
+.core-skills {
+    margin-top: 12px;
+    font-size: 5pt;
+    font-weight: 600;
+    color: var(--gray-text);
+    line-height: 1.5;
+}
+
+.core-skills span {
+    color: var(--brand-navy);
+    font-weight: 700;
+}
+
 .back-ribbon {
     top: 0.55in;
     width: 75%;
@@ -229,6 +242,36 @@ body {
     background: #ffffff;
     padding: 2px 4px;
     border-radius: 2px;
+}
+
+.conversion-flow {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 4px 6px;
+    border-radius: 4px;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    font-size: 5pt;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.c-step {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: #ffffff;
+}
+
+.c-icon {
+    font-size: 6pt;
+}
+
+.c-arrow {
+    color: var(--brand-gold);
+    font-size: 6pt;
 }
 
 .qr-area {
