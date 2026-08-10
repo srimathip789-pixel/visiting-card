@@ -114,10 +114,10 @@ body {
 
 .watermark-logo {
     position: absolute;
-    right: 0;
-    bottom: 0.35in;
-    width: 2.0in;
-    height: 2.0in;
+    right: -2%;
+    bottom: 0.38in;
+    width: 1.55in;
+    height: 1.55in;
     color: rgba(255, 255, 255, 0.04);
     z-index: 0;
     pointer-events: none;
