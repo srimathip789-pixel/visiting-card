@@ -629,6 +629,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-top: 16px; /* Two-line space */
 }
 .benefit-list li {
     font-size: 5pt;
