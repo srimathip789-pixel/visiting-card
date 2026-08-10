@@ -164,6 +164,13 @@ body {
     align-items: center;
     gap: 4px;
 }
+.flag-icon {
+    border: 0.25px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5px;
+    margin: 0 1px;
+    vertical-align: middle;
+    display: inline-block;
+}
 
 /* --- BACK CARD --- */
 .card-back {
