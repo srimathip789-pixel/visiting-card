@@ -20,7 +20,8 @@
             <p style="font-size: 0.8em; opacity: 0.8; margin-top: 5px;">* PDF will download automatically with exact 3.5" x 2" dimensions.</p>
         </div>
     </div>
-
+    
+    <div id="pdf-wrapper">
     <!-- FRONT OF CARD -->
     <div class="visiting-card card-front">
         <!-- Logo Watermark -->
@@ -72,6 +73,8 @@
             </div>
         </div>
     </div>
+    
+    <div class="html2pdf__page-break" style="height: 0; margin: 0; border: none;"></div>
 
     <!-- BACK OF CARD -->
     <div class="visiting-card card-back">
@@ -180,38 +183,26 @@
             <img src="https://quickchart.io/qr?text=https%3A%2F%2Fwa.me%2F97335102870%3Ftext%3DHi%2520Sri%2520Mathi%252C%2520I%2520scanned%2520your%2520visiting%2520card%2520and%2520would%2520like%2520a%2520free%2520website%2520demo%2520layout%2520for%2520my%2520business&size=150&margin=1" alt="QR Code" class="qr-code">
         </div>
     </div>
+    </div>
 
     <!-- html2pdf Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
         function downloadPDF() {
-            // Create a temporary container to hold just the cards
-            const container = document.createElement('div');
+            const btn = document.querySelector('.btn-pdf');
+            btn.innerHTML = "Generating PDF...";
             
-            // Clone the cards so we don't disrupt the UI
-            const front = document.querySelector('.card-front').cloneNode(true);
-            const back = document.querySelector('.card-back').cloneNode(true);
+            // We temporarily strip the shadows just for the capture
+            const cards = document.querySelectorAll('.visiting-card');
+            const originalShadows = [];
+            cards.forEach(card => {
+                originalShadows.push(card.style.boxShadow);
+                card.style.boxShadow = 'none';
+                card.style.margin = '0 auto';
+            });
             
-            // Strip margins and shadows for perfect PDF output
-            front.style.margin = '0';
-            front.style.boxShadow = 'none';
-            back.style.margin = '0';
-            back.style.boxShadow = 'none';
+            const element = document.getElementById('pdf-wrapper');
             
-            // Add html2pdf page break class
-            const pageBreak = document.createElement('div');
-            pageBreak.classList.add('html2pdf__page-break');
-            
-            container.appendChild(front);
-            container.appendChild(pageBreak);
-            container.appendChild(back);
-            
-            // Append off-screen so html2canvas can render it
-            container.style.position = 'absolute';
-            container.style.left = '-9999px';
-            document.body.appendChild(container);
-
-            // Configure PDF exactly to 3.5 x 2 inches in landscape
             const opt = {
                 margin:       0,
                 filename:     'Sri_Mathi_Business_Card.pdf',
@@ -220,9 +211,13 @@
                 jsPDF:        { unit: 'in', format: [3.5, 2.0], orientation: 'landscape' }
             };
 
-            // Generate and download PDF, then cleanup
-            html2pdf().set(opt).from(container).save().then(() => {
-                document.body.removeChild(container);
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Restore shadows
+                cards.forEach((card, index) => {
+                    card.style.boxShadow = originalShadows[index];
+                    card.style.margin = '';
+                });
+                btn.innerHTML = "Download Print-Ready PDF";
             });
         }
     </script>
