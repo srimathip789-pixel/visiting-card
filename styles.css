@@ -290,20 +290,31 @@ body {
 
 .back-main-grid {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    gap: 0.2in;
-    padding: 0.15in 0.2in 0;
+    gap: 0.15in;
+    padding: 0.1in 0.2in 0.1in;
     flex: 1;
     position: relative;
     z-index: 10;
 }
 
-.grid-col-left, .grid-col-right {
+.grid-col-left, .grid-col-left {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: calc(50% - 0.1in);
-    flex: 0 0 calc(50% - 0.1in);
+    justify-content: center;
+    gap: 12px;
+    width: 44%;
+    min-width: 0;
+}
+.grid-col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    width: 56%;
+    min-width: 0;
+}    height: 0.55in;
 }
 
 .svg-logo-wrapper {
@@ -406,10 +417,10 @@ body {
 }
 .pitch-serif {
     font-family: 'Playfair Display', serif;
-    font-size: 7pt;
+    font-size: 6.2pt;
     font-weight: 800;
     color: var(--navy);
-    line-height: 1.1;
+    line-height: 1.15;
     margin-bottom: 2px;
 }
 .pitch-sans {
@@ -426,10 +437,10 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
 }
 .benefit-list li {
-    font-size: 5.5pt;
+    font-size: 5pt;
     font-weight: 600;
     color: var(--navy);
     display: flex;
@@ -638,10 +649,10 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
 }
 .benefit-list li {
-    font-size: 5.5pt;
+    font-size: 5pt;
     font-weight: 600;
     color: var(--navy);
     display: flex;
@@ -772,9 +783,8 @@ body {
 
 .custom-flow-img {
     width: 100%;
-    max-width: 1.6in;
+    max-width: 1.4in;
     object-fit: contain;
-    margin-top: 6px;
     border-radius: 4px;
     mix-blend-mode: multiply;
 }
