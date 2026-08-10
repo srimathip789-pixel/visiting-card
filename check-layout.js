@@ -8,6 +8,10 @@ const path = require('path');
   const fileUrl = 'file://' + path.resolve('index.html');
   await page.goto(fileUrl);
   
+  // Wait a moment for fonts to load
+  await page.waitForTimeout(500);
+  await page.screenshot({ path: 'card_mockup.png' });
+  
   const issues = await page.evaluate(() => {
     const problems = [];
     const elements = document.querySelectorAll('*');
