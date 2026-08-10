@@ -293,7 +293,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 0.15in;
-    padding: 0.1in 0.2in 0.1in;
+    padding: 0.02in 0.2in;
     flex: 1;
     position: relative;
     z-index: 10;
@@ -303,7 +303,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 12px;
+    gap: 6px;
     width: 44%;
     min-width: 0;
 }
@@ -311,7 +311,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 15px;
+    gap: 8px;
     width: 56%;
     min-width: 0;
 }    height: 0.55in;
@@ -417,11 +417,12 @@ body {
 }
 .pitch-serif {
     font-family: 'Playfair Display', serif;
-    font-size: 5.5pt;
+    font-size: 5.2pt;
     font-weight: 800;
     color: var(--navy);
     line-height: 1.15;
     margin-bottom: 2px;
+    white-space: nowrap;
 }
 .pitch-sans {
     font-family: 'Montserrat', sans-serif;
@@ -617,9 +618,9 @@ body {
 
 
 .custom-flow-img {
+    display: block;
     width: 100%;
-    max-width: 1.4in;
+    max-height: 0.6in;
     object-fit: contain;
-    border-radius: 4px;
     mix-blend-mode: multiply;
 }
