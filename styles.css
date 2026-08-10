@@ -350,7 +350,7 @@ body {
 }
 
 .back-footer {
-    background: var(--navy);
+    background: #1A3D7C;
     height: 0.35in;
     display: flex;
     align-items: center;
