@@ -1,5 +1,6 @@
 :root {
-    --cyan: #1cb0f6;
+    --brand-navy: #153250;
+    --brand-gold: #c39b56;
     --dark-text: #222222;
     --light-text: #ffffff;
     --gray-text: #666666;
@@ -33,8 +34,8 @@ body {
     margin-bottom: 1rem;
 }
 .print-controls button {
-    background: var(--cyan);
-    color: white;
+    background: var(--brand-navy);
+    color: var(--brand-gold);
     border: none;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -109,7 +110,7 @@ body {
     position: absolute;
     top: 0.6in;
     left: 0;
-    background: var(--cyan);
+    background: var(--brand-navy);
     color: var(--light-text);
     width: 70%;
     padding: 0.15in;
@@ -131,8 +132,8 @@ body {
 }
 
 .contact-item .icon {
-    background: #ffffff;
-    color: var(--cyan);
+    background: var(--brand-gold);
+    color: var(--brand-navy);
     width: 12px;
     height: 12px;
     display: flex;
@@ -161,7 +162,7 @@ body {
     right: 0.3in;
     width: 0.4in;
     height: 0.15in;
-    background: var(--cyan);
+    background: var(--brand-gold);
     clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
 }
 
@@ -173,31 +174,11 @@ body {
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
 }
 
-.logo-text {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.brand-logo {
+    max-width: 100%;
+    max-height: 0.5in;
+    display: block;
 }
-
-.logo-mark {
-    color: var(--cyan);
-    font-size: 20pt;
-    font-weight: 800;
-    line-height: 20pt;
-    height: 20pt;
-    display: inline-block;
-    overflow: hidden;
-}
-
-.logo-words {
-    display: flex;
-    flex-direction: column;
-    font-size: 8pt;
-    line-height: 1.1;
-    color: var(--dark-text);
-}
-.logo-words strong { letter-spacing: 1px; }
-.logo-words span { color: var(--gray-text); font-size: 6pt; letter-spacing: 1.5px; }
 
 .back-ribbon {
     top: 0.55in;
@@ -223,6 +204,7 @@ body {
 
 .services-list li strong {
     font-weight: 700;
+    color: var(--brand-gold);
 }
 
 .badges {
@@ -231,7 +213,7 @@ body {
     gap: 5px;
     font-size: 5.5pt;
     font-weight: 700;
-    color: var(--cyan);
+    color: var(--brand-navy);
 }
 
 .badges span {
@@ -246,7 +228,7 @@ body {
     left: 0.15in;
     background: #ffffff;
     padding: 4px;
-    border: 2px solid var(--cyan);
+    border: 2px solid var(--brand-navy);
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -255,7 +237,7 @@ body {
 
 .qr-area p {
     font-size: 5pt;
-    color: var(--cyan);
+    color: var(--brand-navy);
     margin-bottom: 2px;
 }
 
