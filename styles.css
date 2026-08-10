@@ -449,7 +449,7 @@ body {
 .flow-col {
     width: 50%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 .flow-box {
     position: relative;
@@ -665,7 +665,7 @@ body {
 .flow-col {
     width: 50%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 .flow-box {
     position: relative;
@@ -784,4 +784,5 @@ body {
     object-fit: contain;
     margin-top: 6px;
     border-radius: 4px;
+    mix-blend-mode: multiply;
 }
