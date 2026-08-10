@@ -279,14 +279,14 @@ body {
     justify-content: center;
 }
 .l-first {
-    font-size: 8.5pt;
+    font-size: 7.5pt;
     font-weight: 800;
     color: var(--navy);
     line-height: 1;
     letter-spacing: 0.5px;
 }
 .l-last {
-    font-size: 8.5pt;
+    font-size: 7.5pt;
     font-weight: 800;
     color: var(--navy);
     line-height: 1;
@@ -440,8 +440,8 @@ body {
     justify-content: space-between;
 }
 .flow-step {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     background: linear-gradient(135deg, #ffffff 0%, #f4f4f4 50%, #e0e0e0 100%);
     border: 0.5px solid var(--gold);
     border-radius: 6px;
